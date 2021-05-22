@@ -1,0 +1,128 @@
+@import 'var';
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+.header-menu-wrap {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    //height: 20%;
+    background-color: #fff;
+    //max-width: 1750px;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    &__link {
+        text-decoration: none;
+        color: $main-color;
+    }
+    &__icon {
+        color: $gold-color;
+        max-width: 40px;
+        width: 100%;
+        margin-right: 15px;
+    }
+}
+.header-title {
+    font-size: 18px;
+    color: $gold-color;
+
+    &:hover {
+        color: $main-color;
+        transition: ease 0.7s;
+    }
+}
+.nav-menu {
+    &__link {
+        margin: 0 30px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+        color: $main-color;
+
+        &-active {
+            color: $gold-color;
+        }
+    }
+}
+
+.nav-menu__link:hover,
+.header-subtitle:hover {
+    color: $gold-color;
+}
+
+.icons-wrap {
+    display: flex;
+}
+
+.login-btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    text-decoration: none;
+    &:hover {
+        color: grey;
+    }
+    &__icon {
+        margin: 0 10px;
+    }
+    &__hidden {
+        opacity: 0;
+    }
+}
+
+.icon-item__link {
+    margin: 0 10px;
+}
+
+.social-icons-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.btn-title {
+    text-decoration: none;
+    color: $main-color;
+}
+.nav-menu__toggle {
+    display: none;
+}
+/*
+@media (max-width: 800px) {
+    .nav-menu,
+    .icons-wrap {
+        display: none;
+    }
+    .header-menu-wrap {
+        padding: 0 10px;
+        width: 100vw;
+        position: initial;
+    }
+
+    .nav-menu__toggle {
+        border: none;
+        outline: none;
+        opacity: 100%;
+        position: initial;
+        background-color: #fff;
+    }
+}
+*/

@@ -1,0 +1,121 @@
+@import 'var';
+
+.post-container__wrap {
+    max-width: 960px;
+    width: 100%;
+    margin: 200px auto;
+    padding: 0;
+
+    display: flex;
+}
+.mobile-page-header {
+    display: none;
+}
+.my-masonry-grid {
+    display: flex;
+    margin-left: -30px;
+    width: 100%;
+}
+.my-masonry-grid_column {
+    padding-left: 30px;
+    //background-clip: padding-box;
+}
+
+.post-item {
+    margin-bottom: 20px;
+    &__content {
+        border: $border;
+        padding: 0;
+    }
+    &__img {
+        //max-width: 452px;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    &__author {
+        text-decoration: none;
+        color: $main-color;
+        font-size: 12px;
+    }
+    &__datacreate {
+        color: #5b5b5b;
+        font-size: 12px;
+    }
+    &__title {
+        font-size: 26px;
+    }
+    &__descript {
+        font-size: 16px;
+        font-weight: 200;
+    }
+    &__link {
+        text-decoration: none;
+        color: $main-color;
+        &:hover {
+            color: $gold-color;
+            transition: color ease 0.3s;
+        }
+    }
+}
+
+.statistic-wrap {
+    font-size: 12px;
+    color: $main-color;
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontal_line {
+    height: 0;
+    border: $border;
+}
+
+.text-wrap {
+    padding: 20px;
+}
+
+.author-wrap {
+    margin-bottom: 15px;
+    display: flex;
+}
+.author-title {
+    display: flex;
+    flex-direction: column;
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+.crown-icn {
+    width: 13px;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+}
+[data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em;
+}
+
+//css for heart button
+
+@media (max-width: 800px) {
+    .my-masonry-grid {
+        margin-left: -15px; /* gutter size offset */
+    }
+    .post-item__img {
+        width: 100%;
+    }
+    .my-masonry-grid_column {
+        padding: 0 15px; /* gutter size offset */
+    }
+    .my-masonry-grid_column > div {
+        margin-bottom: 15px; /* space between items */
+    }
+}

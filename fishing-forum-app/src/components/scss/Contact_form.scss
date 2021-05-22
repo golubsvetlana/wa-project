@@ -1,0 +1,86 @@
+@import 'var';
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 284px;
+    width: 100%;
+}
+
+.input-name,
+.input-email,
+.input-phone,
+.input-message,
+[name='submit-btn'] {
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 47px;
+    padding: 3px 3px 3px 24px;
+    cursor: pointer;
+}
+
+.input-message {
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 3px 24px;
+}
+.contact-form__dark .input-name,
+.contact-form__dark .input-email,
+.contact-form__dark .input-phone,
+.contact-form__dark .input-message {
+    background-color: #464646;
+    color: #fff;
+    border: none;
+    //border: solid 3px #464646;
+    outline: none;
+    &::placeholder {
+        color: #fff;
+    }
+    &:hover,
+    &:focus {
+        border: solid 3px $gold-color;
+    }
+}
+[name='submit-btn'] {
+    width: 50%;
+    align-self: flex-end;
+    padding: 0;
+    background-color: transparent;
+    color: $gold-color;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    &:hover {
+        color: $main-color;
+        transition: color 1s ease 0.4s;
+    }
+}
+.contact-form__dark {
+    position: absolute;
+    top: 675px;
+    left: 900px;
+}
+
+.contact-form__light {
+    position: relative;
+    top: 10%;
+    left: 60%;
+}
+.contact-form__light .input-name,
+.contact-form__light .input-email,
+.contact-form__light .input-phone,
+.contact-form__light .input-message {
+    background-color: #fff;
+    color: $main-color;
+    border: none;
+    border: solid 1px #464646;
+    outline: none;
+    &::placeholder {
+        color: $grey-color;
+    }
+    &:hover,
+    &:focus {
+        border: solid 3px #464646;
+    }
+}

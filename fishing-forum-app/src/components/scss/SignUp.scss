@@ -1,0 +1,86 @@
+@import 'var';
+
+.content {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.page {
+    &__title {
+        font-size: 48px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 200;
+    }
+    &__link {
+        text-decoration: none;
+        color: $gold-color;
+    }
+}
+
+.btn-form {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.signup-wrap,
+.login-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.signup-form,
+.login-form {
+    display: none;
+    //width: 100%;
+    &__active {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+.email-input,
+.pswd-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid $main-color;
+    margin: 10px auto;
+    font-size: 14px;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid $gold-color;
+    }
+}
+
+.email-input-label,
+.pswd-input-label {
+    font-size: 14px;
+}
+
+.btn-login,
+.btn-signup {
+    width: 100%;
+    height: 48px;
+    background-color: $gold-color;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}

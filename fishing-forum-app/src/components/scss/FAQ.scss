@@ -1,0 +1,22 @@
+.faq-content {
+    margin: 100px auto;
+    max-width: 1750px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &_text {
+        margin-left: 100px;
+        &-title {
+            font-size: 50px;
+            line-height: 150px;
+        }
+        &-list {
+            padding: 0;
+            &-item {
+                list-style: none;
+                line-height: 1.4em;
+                font-size: 18px;
+            }
+        }
+    }
+}

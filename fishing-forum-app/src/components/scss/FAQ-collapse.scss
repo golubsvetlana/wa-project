@@ -1,0 +1,100 @@
+@import 'var';
+
+.faq-collapse {
+    &-wrap {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &-head {
+        font-size: 50px;
+    }
+    &-title {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+.rc-collapse-motion {
+    transition: height 0.3s, opacity 0.3s;
+}
+.rc-collapse-content-hidden {
+    display: none;
+}
+.rc-collapse {
+    width: 100%;
+    margin-top: 50px;
+}
+.rc-collapse > .rc-collapse-item {
+    border-bottom: 1px solid $gold-color;
+}
+.rc-collapse > .rc-collapse-item:first-child {
+    border-top: none;
+}
+.rc-collapse > .rc-collapse-item > .rc-collapse-header {
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+    padding: 25px 16px;
+    color: $grey-color;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
+    display: inline-block;
+    /*content: '∨';*/
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    margin-right: 8px;
+    border: solid black;
+    border-width: 0px 1px 1px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    //margin-left: 20px;
+}
+.rc-collapse > .rc-collapse-item > .rc-collapse-header .rc-collapse-extra {
+    margin: 0 16px 0 auto;
+}
+.rc-collapse > .rc-collapse-item .rc-collapse-header-collapsible-only {
+    cursor: default;
+}
+.rc-collapse
+    > .rc-collapse-item
+    .rc-collapse-header-collapsible-only
+    .rc-collapse-header-text {
+    cursor: pointer;
+}
+.rc-collapse > .rc-collapse-item-disabled > .rc-collapse-header {
+    cursor: not-allowed;
+    color: $grey-color;
+    font-size: 18px;
+    background-color: #f3f3f3;
+}
+.rc-collapse-content {
+    overflow: hidden;
+    color: $grey-color;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 200;
+    padding: 0 16px;
+    background-color: #fff;
+}
+.rc-collapse-content > .rc-collapse-content-box {
+    margin-top: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.rc-collapse-item:last-child > .rc-collapse-content {
+    //border-radius: 0 0 3px 3px;
+    padding-bottom: 0px;
+}
+.rc-collapse > .rc-collapse-item-active > .rc-collapse-header .arrow {
+    transform: rotate(-135deg);
+    //transition: ease 0.7s;
+}
